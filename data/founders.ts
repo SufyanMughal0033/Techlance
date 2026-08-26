@@ -10,7 +10,7 @@ export const founders: Founder[] = [
     name: "Sufyan Mughal",
     role: "Founder",
     image: "/images/founder.jpeg",
-    bio: "Sufyan founded Techlance and leads its web development and creative direction. He works across web development and digital product design, shaping the technical foundation and visual direction of the company's projects and translating client needs into working digital solutions.",
+    bio: "Sufyan Mughal founded Techlance and leads its web development and creative direction. He works across web development and digital product design, shaping the technical foundation and visual direction of the company's projects and translating client needs into working digital solutions.",
   },
   {
     name: "Muhammad Mahad",
