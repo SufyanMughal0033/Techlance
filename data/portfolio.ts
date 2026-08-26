@@ -14,49 +14,53 @@ export interface PortfolioItem {
  * intentionally stable so it can be swapped in without touching UI code.
  */
 export const portfolioItems: PortfolioItem[] = [
-  {
-    id: "project-01",
-    category: "Web Development",
-    title: "Project 01",
-    description: "Placeholder for an early practice website. Replace with the project name, live URL and a short summary.",
-    technologies: ["React", "Next.js"],
-    url: null,
-    image: null,
-  },
-  {
-    id: "project-02",
-    category: "Web Development",
-    title: "Project 02",
-    description: "Placeholder for an early practice website. Replace with the project name, live URL and a short summary.",
-    technologies: ["React", "Tailwind CSS"],
-    url: null,
-    image: null,
-  },
-  {
-    id: "project-03",
-    category: "E-commerce",
-    title: "Project 03",
-    description: "Placeholder for an early practice website. Replace with the project name, live URL and a short summary.",
-    technologies: ["Shopify"],
-    url: null,
-    image: null,
-  },
-  {
-    id: "project-04",
-    category: "Portfolio Website",
-    title: "Project 04",
-    description: "Placeholder for an early practice website. Replace with the project name, live URL and a short summary.",
-    technologies: ["React", "Framer Motion"],
-    url: null,
-    image: null,
-  },
-  {
-    id: "project-05",
-    category: "Single Page Website",
-    title: "Project 05",
-    description: "Placeholder for an early practice website. Replace with the project name, live URL and a short summary.",
-    technologies: ["Next.js", "TypeScript"],
-    url: null,
-    image: null,
-  },
+{
+  id: "project-01",
+  category: "RealEstate Company",
+  title: "RealEstate",
+  description: "A modern and responsive real estate website designed with a clean interface and smooth user experience.",
+  technologies: ["React", "Next.js"],
+  url: "https://steady-sorbet-ef1829.netlify.app/",
+  image: "/projects/project-01.png",
+},
+ {
+  id: "project-02",
+  category: "Tyre Shop",
+  title: "TyreSpace",
+  description:
+    "A premium tyre and automotive website designed to showcase tyre products, automotive services, trusted brands, and easy quote requests through a bold black and red interface.",
+  technologies: ["React", "Tailwind CSS"],
+  url: "https://moonlit-cucurucho-03d49a.netlify.app/",
+  image: "/projects/project-02.png",
+},
+{
+  id: "project-03",
+  category: "E-Commerce",
+  title: "e-Mart by Sufyan",
+  description:
+    "A modern fashion e-commerce website featuring men's and women's collections, ladies bags, product browsing, shopping experience, and a premium dark-themed interface.",
+  technologies: ["React", "Bootstrap"],
+  url: "https://chimerical-douhua-9b6dbe.netlify.app/",
+  image: "/projects/project-03.png",
+},
+{
+  id: "project-04",
+  category: "Coffee Shop",
+  title: "Coffee.co",
+  description:
+    "A premium coffee shop website focused on elegant presentation, menu discovery, table reservations, services, reviews, and a warm luxury-inspired visual experience.",
+  technologies: ["React", "Framer Motion"],
+  url: "https://superlative-bienenstitch-f4b316.netlify.app/",
+  image: "/projects/project-04.png",
+},
+{
+  id: "project-05",
+  category: "Textile Export & Import",
+  title: "Ismail World Export & Import",
+  description:
+    "A professional B2B textile export and import website built to present products, manufacturing capabilities, global market expertise, and quote inquiries to international buyers.",
+  technologies: ["React",],
+  url: "https://creative-paletas-d1ecbc.netlify.app/",
+  image: "/projects/project-05.png",
+},
 ];

@@ -72,6 +72,14 @@ export const services: Service[] = [
     category: "marketing",
   },
   {
+  number: "09",
+  title: "SEO",
+  description:
+    "Search engine optimization focused on technical health, keyword strategy, content and sustainable organic growth.",
+  tags: ["Technical SEO", "Keyword Strategy", "Content SEO"],
+  category: "marketing",
+},
+  {
     number: "09",
     title: "Digital Marketing & Lead Generation",
     description:
