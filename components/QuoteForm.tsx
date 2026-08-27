@@ -124,7 +124,7 @@ Details: ${message}`;
         type="submit"
         className="w-full rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bg transition-opacity hover:opacity-90 dark:bg-accent dark:text-accent-ink sm:w-auto"
       >
-        Send via WhatsApp
+       Send Inquiry
       </button>
     </form>
   );
