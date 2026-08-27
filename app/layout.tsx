@@ -5,40 +5,71 @@ import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+
   title: {
-    default: `${siteConfig.name} — Digital Agency for Web Development & Marketing`,
+    default: `${siteConfig.name} — Web Development & Digital Marketing Agency`,
     template: `%s — ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+
+  description:
+    "Techlance is a web development and digital marketing agency helping businesses grow through high-performance websites, e-commerce solutions, SEO, and digital marketing.",
+
   keywords: [
     "Techlance",
-    "digital agency Pakistan",
     "web development agency",
-    "React development",
+    "web development agency Pakistan",
+    "website development company Pakistan",
+    "digital marketing agency Pakistan",
+    "ecommerce development Pakistan",
+    "Shopify development Pakistan",
     "Next.js development",
-    "Shopify development",
-    "digital marketing agency",
-    "Facebook ads agency",
-    "Google ads agency",
+    "React development",
+    "SEO agency Pakistan",
+    "Google Ads agency",
+    "Facebook Ads agency",
   ],
-  authors: [{ name: siteConfig.name }],
-  creator: siteConfig.name,
+
+  authors: [
+    {
+      name: "Techlance",
+      url: siteConfig.url,
+    },
+  ],
+
+  creator: "Techlance",
+  publisher: "Techlance",
+
+  alternates: {
+    canonical: siteConfig.url,
+  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
-    title: `${siteConfig.name} — Digital Agency for Web Development & Marketing`,
-    description: siteConfig.description,
+    title: `${siteConfig.name} — Web Development & Digital Marketing Agency`,
+    description:
+      "Web development, e-commerce, SEO, and digital marketing solutions for growing businesses.",
     siteName: siteConfig.name,
   },
+
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — Digital Agency for Web Development & Marketing`,
-    description: siteConfig.description,
+    title: `${siteConfig.name} — Web Development & Digital Marketing Agency`,
+    description:
+      "Web development, e-commerce, SEO, and digital marketing solutions for growing businesses.",
   },
+
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -73,9 +104,8 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body
-        className="font-sans antialiased bg-bg text-ink transition-colors duration-300"
-      >
+
+      <body className="font-sans antialiased bg-bg text-ink transition-colors duration-300">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
