@@ -14,17 +14,54 @@ export function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
+
     onScroll();
+
     window.addEventListener("scroll", onScroll, { passive: true });
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close mobile menu when screen becomes desktop size
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setMenuOpen(false);
+      }
     };
-  }, [menuOpen]);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Mobile navigation handler
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+
+    setMenuOpen(false);
+
+    const target = document.querySelector(href);
+
+    if (target) {
+      setTimeout(() => {
+        const navbarHeight = 80;
+
+        const targetPosition =
+          target.getBoundingClientRect().top +
+          window.scrollY -
+          navbarHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }, 100);
+    }
+  };
 
   return (
     <header
@@ -43,11 +80,16 @@ export function Navbar() {
       >
         <Logo />
 
-        <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">
+        {/* Desktop Navigation */}
+        <nav
+          className="hidden items-center gap-9 lg:flex"
+          aria-label="Primary"
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-[13.5px] font-medium tracking-tight text-muted transition-colors duration-200 hover:text-ink"
             >
               {link.label}
@@ -55,18 +97,23 @@ export function Navbar() {
           ))}
         </nav>
 
+        {/* Desktop Actions */}
         <div className="hidden items-center gap-4 lg:flex">
           <ThemeToggle />
+
           <a
             href="#contact"
+            onClick={(e) => handleNavClick(e, "#contact")}
             className="rounded-full bg-ink px-5 py-2.5 text-[13.5px] font-medium text-bg transition-opacity duration-200 hover:opacity-85 dark:bg-accent dark:text-accent-ink"
           >
             Get a Quote
           </a>
         </div>
 
+        {/* Mobile Actions */}
         <div className="flex items-center gap-3 lg:hidden">
           <ThemeToggle />
+
           <button
             type="button"
             onClick={() => setMenuOpen((prev) => !prev)}
@@ -79,14 +126,18 @@ export function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden border-t border-border bg-bg lg:hidden"
+            transition={{
+              duration: 0.35,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="border-t border-border bg-bg lg:hidden"
           >
             <nav
               className="container-edge flex flex-col gap-1 py-6"
@@ -96,18 +147,22 @@ export function Navbar() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.05 * index, duration: 0.3 }}
+                  transition={{
+                    delay: 0.05 * index,
+                    duration: 0.3,
+                  }}
                   className="border-b border-border/60 py-4 font-display text-2xl font-medium tracking-tightest text-ink last:border-none"
                 >
                   {link.label}
                 </motion.a>
               ))}
+
               <a
                 href="#contact"
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, "#contact")}
                 className="mt-6 inline-flex w-fit items-center rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bg dark:bg-accent dark:text-accent-ink"
               >
                 Get a Quote
