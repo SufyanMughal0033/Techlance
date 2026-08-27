@@ -80,7 +80,7 @@ export const services: Service[] = [
   category: "marketing",
 },
   {
-    number: "09",
+    number: "10",
     title: "Digital Marketing & Lead Generation",
     description:
       "End-to-end campaign strategy focused on qualified leads and measurable performance.",
