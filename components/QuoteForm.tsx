@@ -181,7 +181,7 @@ export function QuoteForm() {
           htmlFor="message"
           className="mb-2 block text-sm font-medium text-ink"
         >
-          Project Details
+          Project Details & your Whatsapp Number
         </label>
 
         <textarea
