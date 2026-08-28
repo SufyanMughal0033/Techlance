@@ -12,11 +12,10 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Techlance is a web development and digital marketing agency helping businesses grow through high-performance websites, e-commerce solutions, SEO, and digital marketing.",
+    "Techlance is a web development and digital marketing agency helping businesses grow with high-performance websites, e-commerce solutions, SEO, Shopify development, and digital marketing.",
 
   keywords: [
     "Techlance",
-    "web development agency",
     "web development agency Pakistan",
     "website development company Pakistan",
     "digital marketing agency Pakistan",
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     title: `${siteConfig.name} — Web Development & Digital Marketing Agency`,
     description:
-      "Web development, e-commerce, SEO, and digital marketing solutions for growing businesses.",
+      "Web development, e-commerce, Shopify, SEO, and digital marketing solutions for growing businesses.",
     siteName: siteConfig.name,
   },
 
@@ -57,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteConfig.name} — Web Development & Digital Marketing Agency`,
     description:
-      "Web development, e-commerce, SEO, and digital marketing solutions for growing businesses.",
+      "Web development, e-commerce, Shopify, SEO, and digital marketing solutions for growing businesses.",
   },
 
   robots: {
