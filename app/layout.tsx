@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { siteConfig } from "@/data/site";
+import { SmoothScroll } from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -105,7 +106,11 @@ export default function RootLayout({
       </head>
 
       <body className="font-sans antialiased bg-bg text-ink transition-colors duration-300">
-        <ThemeProvider>{children}</ThemeProvider>
+        <SmoothScroll />
+
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
