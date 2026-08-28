@@ -13,8 +13,8 @@ export const siteConfig = {
   whatsappDisplay: "+92 328 7060442",
 
   social: {
-    facebook: null as string | null,
-    instagram: null as string | null,
+    facebook: "https://www.facebook.com/profile.php?id=61593665375444",
+    instagram: "https://www.instagram.com/techlance_digital_agency",
     linkedin: null as string | null,
   },
 
