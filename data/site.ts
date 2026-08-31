@@ -14,8 +14,8 @@ export const siteConfig = {
 
   social: {
     facebook: "https://www.facebook.com/profile.php?id=61593665375444",
-    instagram: "https://www.instagram.com/techlance_digital_agency",
-    linkedin: null as string | null,
+    instagram: "https://www.instagram.com/techlance_official_?igsi=MTRlamllNjJkbG0wOQ==",
+    linkedin: "https://www.linkedin.com/in/sufyan-asghar-sm?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
 
   founded: 2024,

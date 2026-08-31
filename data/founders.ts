@@ -15,7 +15,7 @@ export const founders: Founder[] = [
   {
     name: "Muhammad Mahad",
     role: "Chief Executive Officer",
-   image: "/images/Ceo.jpeg",
+   image: "/images/ceo.jpeg",
     bio: "Mahad leads business development and strategic direction at Techlance. He is focused on company growth, client relationships and operations, and is guiding Techlance's expansion from serving clients in Pakistan toward working with businesses internationally.",
   },
 ];
